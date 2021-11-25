@@ -19,6 +19,7 @@
     --color-lightBlue: #08A6E4;
     --color-grey: #A5A5A5;
     --color-black: #000000;
+    --color-blue-shadow: #07ACE629;
 }
 
 .container {
@@ -75,4 +76,63 @@ header .container {
     font-weight: var(--font-weight-light);
     font-size: calc(2 * var(--font-size-primary));
     color: var(--color-lightBlue);
+    margin-left: 35.5px;
 }
+
+/*here is the banner part of the page*/
+
+.banner {
+    width: 100%;
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner-content h1 {
+    font-family: var(--font-family-raleway);
+    font-weight: var(--font-weight-regular);
+    font-size: calc(var(--font-size-primary) / 16 * 49);
+    color: var(--color-black);
+    padding-top: 130px;
+}
+
+.banner-content p {
+    font-family: var(--font-family-open);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-primary);
+    color: var(--color-black);
+    padding-top: 20px;
+}
+
+.banner-content a {
+    text-decoration: none;
+    font-family: var(--font-family-open);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-primary);
+    padding-top: 38px;
+    color: var(--color-white);
+}
+
+.banner-button {
+    background-color: var(--color-lightBlue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 23px 157px;
+    box-shadow: var(--color-blue-shadow) 5px 10px 14px;
+    border-radius: 40px;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
