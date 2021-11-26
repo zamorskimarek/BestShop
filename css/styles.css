@@ -20,10 +20,21 @@
     --color-grey: #A5A5A5;
     --color-black: #000000;
     --color-blue-shadow: #07ACE629;
+    --color-red: #FB3B64;
+    --color-green: #55DFB4;
+    --circle-radius: 31.5px;
 }
 
 .container {
     width: 1352px;
+}
+
+h2 {
+    font-family: Var(--font-family-raleway);
+    font-weight: var(--font-weight-regular);
+    font-size: calc(var(--font-size-primary) / 16 * 36);
+    color: var(--color-black);
+
 }
 
 header {
@@ -83,7 +94,7 @@ header .container {
 
 .banner {
     width: 100%;
-    height: calc(100vh - 70px);
+    /*height: calc(100vh - 70px);*/
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -134,5 +145,85 @@ header .container {
 .banner img {
     width: 100%;
     height: auto;
+}
+
+/*here is the part with the statistics about our page*/
+
+.stats {
+    height: 531px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: var(--color-grey) 0 -5px 80px;
+}
+
+.stats-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.stats h2 {
+    padding: 100px 0;
+}
+
+.circle {
+    width: calc(var(--circle-radius) * 2);
+    height: calc(var(--circle-radius) * 2);
+    border-radius: var(--circle-radius);
+    position: relative;
+    margin-bottom: 14px;
+}
+
+.red {
+    background-color: var(--color-red);
+}
+
+.blue {
+    background-color: var(--color-lightBlue);
+}
+
+.green {
+    background-color: var(--color-green);
+}
+
+.stats-logo {
+    position: absolute;
+    left: var(--circle-radius);
+    top: 3px;
+}
+
+.blue .stats-logo {
+    left: calc(var(--circle-radius) * 0.6);
+    top: 14px;
+}
+
+.green .stats-logo {
+    top: 6px;
+}
+
+.stats-items-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 102.5px;
+}
+
+.stats-items-column p {
+    font-family: var(--font-family-raleway);
+    font-size: calc(var(--font-size-primary) / 16 * 17);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-grey);
+    margin-top: 19px;
+    width: 120px;
+    text-align: center;
+}
+
+.stats-items-column p span {
+    font-weight: var(--font-weight-xBold);
+    color: var(--color-black);
+    font-size: calc(var(--font-size-primary) / 16 * 20);
+    letter-spacing: 6px;
 }
 
