@@ -24,6 +24,8 @@
     --color-green: #55DFB4;
     --color-light-grey: #F7F7F7;
     --color-benefits-shadow: #E8E9ED;
+    --color-semi-black: #13253B;
+    --color-vrey-light-blue: #07ACE629;
     --circle-radius: 31.5px;
 }
 
@@ -232,7 +234,7 @@ header .container {
 /*here is the benefits part of page*/
 
 .benefits {
-    width: 100%;
+    /*width: 100%;*/
     background-color: var(--color-light-grey);
     display: flex;
     flex-direction: column;
@@ -289,6 +291,7 @@ header .container {
 .red-rounded-square {
     width: 180px;
     height: 180px;
+    /*b^2 = 2a^2 -> b = a root 2 , when a = 255 /2 */
     background-color: var(--color-red);
     border-radius: 40px;
     transform: rotate(45deg);
@@ -328,6 +331,7 @@ header .container {
 .benefits-box:last-of-type {
     background-color: transparent;
     border: none;
+    margin-bottom: 105px;
 }
 
 .benefits-box:last-of-type .benefits-box-text {
@@ -355,4 +359,142 @@ header .container {
 .benefits-box-img3 {
     width: 296px;
     height: 207px;
+}
+
+/*here is the pricing part of the page*/
+
+.pricing {
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pricing > h2 {
+    padding: 100px 0 50px 0;
+}
+
+.price-options {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.price-options-box {
+    width: 372px;
+    height: 461px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--color-red);
+    border-radius: 18px;
+    position: relative;
+    margin: 21px 29.5px 0 29.5px;
+}
+
+.pricing-header {
+    font-family: var(--font-family-raleway);
+    font-weight: var(--font-weight-bold);
+    font-size: calc(var(--font-size-primary) / 16 * 20);
+    color: var(--color-black);
+    padding-top: 34px;
+}
+
+.amount {
+    font-family: var(--font-family-open);
+    font-weight: var(--font-weight-light);
+    font-size: calc(var(--font-size-primary) / 16 * 46);
+    color: var(--color-red);
+    padding-top: 14px;
+    padding-bottom: 69px;
+}
+
+.limited {
+    font-family: var(--font-family-raleway);
+    font-weight: var(--font-weight-bold);
+    font-size: calc(var(--font-size-primary) / 16 * 12);
+    color: var(--color-semi-black);
+    padding: 10px 0 61px 0;
+}
+
+.price-options-box ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.included, .not-included {
+    font-family: var(--font-family-open);
+    font-weight: var(--font-weight-regular);
+    font-size: calc(var(--font-size-primary) / 16 * 14);
+    padding-bottom: 20px;
+}
+
+.included::before {
+    content: "";
+    width: 11px;
+    height: 11px;
+    display: inline-block;
+    background-image: url("/assets/Ckechmark-1.svg");
+    margin-right: 10px;
+}
+
+.not-included::before {
+    content: "";
+    width: 11px;
+    height: 11px;
+    background-image: url("/assets/Close.svg");
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.price-options-link {
+    text-decoration: none;
+    font-family: var(--font-family-open);
+    font-weight: var(--font-weight-bold);
+    font-size: calc(var(--font-size-primary) / 16 * 13);
+    color: var(--color-white);
+    background-color: var(--color-red);
+    padding: 16px 57px;
+    border-radius: 23px;
+    position: absolute;
+    bottom: -25px;
+}
+
+.price-options-box:nth-of-type(2)  {
+    height: 500px;
+    width: 405px;
+    border: 1px solid var(--color-lightBlue);
+    margin-top: 0;
+    box-shadow: var(--color-vrey-light-blue) 5px 10px 27px;
+}
+
+.price-options-box:nth-of-type(2) h3 {
+    font-size: calc(var(--font-size-primary) / 16 * 21);
+}
+
+.price-options-box:nth-of-type(2) p.amount {
+    color: var(--color-lightBlue);
+    padding-bottom: 5px;
+}
+
+.price-options-box:nth-of-type(2) a {
+    background-color: var(--color-lightBlue);
+}
+
+.price-options-box:last-of-type {
+    border: 1px solid var(--color-green);
+}
+
+.price-options-box:last-of-type p.amount {
+    color: var(--color-green);
+    padding-bottom: 5px;
+}
+
+.price-options-box:last-of-type a {
+    background-color: var(--color-green);
+}
+
+.price-options-box:last-of-type p.limited {
+    padding-bottom: 37px;
 }
