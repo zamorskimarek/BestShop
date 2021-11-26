@@ -9,23 +9,26 @@
     --font-family-raleway: 'Raleway', sans-serif;
     --font-weight-light: 300;
     --font-weight-regular: 400;
+    --font-weight-semiBold: 600;
     --font-weight-bold: 700;
     --font-weight-xBold: 800;
     --font-size-primary: 16px;
-    --color-primary: #08A6E4;
     --color-white: #FFFFFF;
     --color-primary-shadow: rgba(7, 172, 230, .16);
     --color-box-shadow: #00000029;
     --color-lightBlue: #08A6E4;
+    --color-blue-secondary: #07ACE6;
     --color-grey: #A5A5A5;
     --color-black: #000000;
     --color-blue-shadow: #07ACE629;
     --color-red: #FB3B64;
     --color-green: #55DFB4;
     --color-light-grey: #F7F7F7;
+    --color-grey-checkbox: #95989A;
     --color-benefits-shadow: #E8E9ED;
     --color-semi-black: #13253B;
     --color-vrey-light-blue: #07ACE629;
+    --color-text-checkbox: #707070;
     --circle-radius: 31.5px;
 }
 
@@ -321,7 +324,7 @@ header .container {
 .blue-big-circle {
     width: 320px;
     height: 320px;
-    background-color: var(--color-lightBlue);
+    background-color: var(--color-blue-secondary);
     border-radius: 50%;
     position: absolute;
     left: 70px;
@@ -464,7 +467,7 @@ header .container {
 .price-options-box:nth-of-type(2)  {
     height: 500px;
     width: 405px;
-    border: 1px solid var(--color-lightBlue);
+    border: 1px solid var(--color-blue-secondary);
     margin-top: 0;
     box-shadow: var(--color-vrey-light-blue) 5px 10px 27px;
 }
@@ -474,12 +477,12 @@ header .container {
 }
 
 .price-options-box:nth-of-type(2) p.amount {
-    color: var(--color-lightBlue);
+    color: var(--color-blue-secondary);
     padding-bottom: 5px;
 }
 
 .price-options-box:nth-of-type(2) a {
-    background-color: var(--color-lightBlue);
+    background-color: var(--color-blue-secondary);
 }
 
 .price-options-box:last-of-type {
@@ -498,3 +501,130 @@ header .container {
 .price-options-box:last-of-type p.limited {
     padding-bottom: 37px;
 }
+
+/*here is contact part of page*/
+
+.contact {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 179px;
+}
+
+.contact h2 {
+    font-size: calc(var(--font-size-primary) / 16 * 49);
+}
+
+.contact-form {
+    width: 397px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 3px;
+}
+
+.contact-form-text {
+    text-transform: uppercase;
+    font-family: var(--font-family-open);
+    font-weight: var(--font-weight-bold);
+    font-size: calc(var(--font-size-primary) / 16 * 11);
+    color: var(--color-lightBlue);
+}
+
+.contact-form-text:last-of-type {
+    padding-top: 42px;
+}
+
+.checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    font-family: var(--font-family-open);
+    font-weight: var(--font-weight-regular);
+    font-size: calc(var(--font-size-primary) / 16 * 12);
+    color: var(--color-text-checkbox);
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.checkbox span {
+    height: 24px;
+    flex-shrink: 0;
+    flex-basis: 24px;
+    border: 1px solid var(--color-grey-checkbox);
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.checkbox input:checked + span {
+    background-image: url("/assets/Checkmark.svg");
+    background-size: 12px;
+    background-position: center;
+    background-repeat: no-repeat;}
+
+.btn {
+    width: 226px;
+    height: 57px;
+    background-color: var(--color-lightBlue);
+    color: var(--color-white);
+    font-size: calc(var(--font-size-primary) / 16 * 13);
+    font-weight: var(--font-weight-bold);
+    font-family: var(--font-family-open);
+    border: none;
+    border-radius: 35px;
+}
+
+.button-position {
+    display: flex;
+    justify-content: end;
+    padding-bottom: 59px;
+}
+
+input[type="text"] {
+    border: none;
+    border-bottom: 1px solid var(--color-black);
+    height: 43px;
+}
+
+.contact-text {
+    font-family: var(--font-family-open);
+    font-weight: var(--font-weight-semiBold);
+    font-size: var(--font-size-primary);
+    color: var(--color-grey);
+    padding-right: 114px;
+}
+
+.contact-text p {
+    font-weight: var(--font-weight-regular);
+    color: var(--color-black);
+    padding: 22px 0 42px 0;
+}
+
+.contact-information img {
+    padding-right: 10px;
+}
+
+.contact-information img:last-of-type {
+    padding-left: 20px;
+}
+/*input[type="checkbox"] {*/
+/*    display: none;*/
+/*}*/
+
+/*input[type="checkbox"] + span {*/
+/*    width: 24px;*/
+/*    height: 24px;*/
+/*    border: 1px solid var(--color-grey-checkbox);*/
+/*    border-radius: 4px;*/
+/*    display: inline-block;*/
+/*}*/
+
+
