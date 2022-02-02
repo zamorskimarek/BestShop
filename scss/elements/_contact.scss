@@ -1,0 +1,115 @@
+
+.contact {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 179px;
+}
+
+.contact h2 {
+  font-size: 3.0625rem;
+  font-weight: $font-weight-regular;
+  color: $color-black;
+}
+
+.contact-form {
+  width: 397px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 3px;
+}
+
+.contact-form-text {
+  text-transform: uppercase;
+  font-family: $font-open-sans;
+  font-weight: $font-weight-bold;
+  font-size: 0.6875rem;
+  color: $color-lightBlue;
+}
+
+.contact-form-text:last-of-type {
+  padding-top: 42px;
+}
+
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox {
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  font-family: $font-open-sans;
+  font-weight: $font-weight-regular;
+  font-size: 0.75rem;
+  color: $color-text-checkbox;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.checkbox span {
+  height: 24px;
+  flex-shrink: 0;
+  flex-basis: 24px;
+  border: 1px solid $color-grey-checkbox;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.checkbox input:checked + span {
+  background-image: url("../assets/Checkmark.svg");
+  background-size: 12px;
+  background-position: center;
+  background-repeat: no-repeat;}
+
+.btn {
+  width: 226px;
+  height: 57px;
+  background-color: $color-lightBlue;
+  color: $color-white;
+  font-size: 0.8125rem;
+  font-weight: $font-weight-bold;
+  font-family: $font-open-sans;
+  border: none;
+  border-radius: 35px;
+  box-shadow: $color-blue-shadow 5px 10px 14px;
+}
+
+.button-position {
+  display: flex;
+  justify-content: end;
+  padding-bottom: 59px;
+}
+
+input[type="text"] {
+  border: none;
+  border-bottom: 1px solid $color-black;
+  height: 43px;
+}
+
+.contact-text {
+  font-family: $font-open-sans;
+  font-weight: $font-weight-semiBold;
+  font-size: $font-size-primary;
+  color: $color-grey;
+  padding-right: 114px;
+}
+
+.contact-text p {
+  font-weight: $font-weight-regular;
+  color: $color-black;
+  padding: 22px 0 42px 0;
+}
+
+.contact-information img {
+  padding-right: 10px;
+}
+
+.contact-information img:last-of-type {
+  padding-left: 20px;
+}

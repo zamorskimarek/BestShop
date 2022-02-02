@@ -1,2 +1,13 @@
 
-@import "scss/reset";
+@import "generic/reset";
+
+@import "settings";
+@import "elements/base";
+@import "elements/header";
+@import "elements/banner";
+@import "elements/stats";
+@import "elements/benefits";
+@import "elements/pricing";
+@import "elements/contact";
+@import "elements/calculator";
+@import "elements/footer";

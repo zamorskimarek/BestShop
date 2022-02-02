@@ -1,0 +1,95 @@
+.stats {
+  height: 531px;
+  @include mobile {
+    height: auto;
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: $color-grey 0 -5px 80px;
+
+  h2 {
+    padding: 100px 0;
+    text-align: center;
+    @include mobile {
+      padding: 20px 0;
+    }
+  }
+
+  &-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &-logo {
+    position: absolute;
+    left: $circle-radius;
+    top: 3px;
+  }
+
+  &-items-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 102.5px;
+
+    p {
+      font-family: $font-raleway;
+      font-size: 1.0625rem;
+      font-weight: $font-weight-regular;
+      color: $color-grey;
+      margin-top: 19px;
+      width: 120px;
+      text-align: center;
+      @include mobile {
+        padding-bottom: 30px;
+      }
+    }
+
+    span {
+      font-weight: $font-weight-xBold;
+      color: $color-black;
+      font-size: 1.25rem;
+      letter-spacing: 6px;
+    }
+  }
+}
+
+
+
+
+.circle {
+  width: $circle-radius * 2;
+  height: $circle-radius * 2;
+  border-radius: $circle-radius;
+  position: relative;
+  margin-bottom: 14px;
+}
+
+.red {
+  background-color: $color-red;
+}
+
+.blue {
+  background-color: $color-lightBlue;
+}
+
+.green {
+  background-color: $color-green;
+}
+
+
+.blue .stats-logo {
+  left: $circle-radius * 0.6;
+  top: 14px;
+}
+
+.green .stats-logo {
+  top: 6px;
+}
+

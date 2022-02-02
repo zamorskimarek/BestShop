@@ -1,0 +1,176 @@
+.benefits {
+  width: 100%;
+  background-color: $color-light-grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-box {
+    height: 500px;
+    background-color: $color-white;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 37px;
+    border: 1px solid $color-benefits-shadow;
+    border-radius: 5px;
+  }
+
+  &-box:nth-child(2) {
+    height: 500px;
+    background-color: $color-white;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    position: relative;
+    padding-right: 35px;
+
+    @include tablet {
+      flex-direction: row;
+    }
+    .benefits-box-underline {
+      background-color: $color-lightBlue;
+    }
+  }
+
+  &-box-text {
+    padding: 91px 0 0 35px;
+    width: 50%;
+    color: $color-black;
+
+    @include tablet {
+      width: 90%;
+      position: absolute;
+      top: 200px;
+    }
+
+    p {
+      font-family: $font-open-sans;
+      font-size: $font-size-primary;
+      font-weight: $font-weight-regular;
+      color: $color-black;
+      padding-top: 30px;
+    }
+  }
+
+  &-box-underline {
+    width: 328px;
+    height: 4px;
+    background-color: $color-red;
+    margin-top: 50px;
+    @include tablet {
+      display: none;
+    }
+  }
+}
+
+
+.benefits-box-img {
+  width: 386px;
+  height: auto;
+  position: absolute;
+  right: 80px;
+  top: 80px;
+  z-index: 1;
+
+  @include tablet {
+    top: 50px;
+    left: calc(50% - (386px / 2));
+  }
+}
+
+.red-rounded-square {
+  width: 180px;
+  height: 180px;
+  /*b^2 = 2a^2 -> b = a root 2 , when a = 255 /2 */
+  background-color: $color-red;
+  border-radius: 40px;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 40px;
+  right: 71px;
+  @include tablet {
+    top: 25px;
+    right: calc(50% - (386px / 2));
+  }
+}
+
+.benefits-box-img2 {
+  height: 328px;
+  width: auto;
+  position: absolute;
+  left: 70px;
+  top: 29px;
+  z-index: 1;
+  @include tablet {
+    height: 200px;
+    top: 50px;
+    left: calc(50% - (200px / 2));
+  }
+}
+
+.blue-big-circle {
+  width: 320px;
+  height: 320px;
+  background-color: $color-blue-secondary;
+  border-radius: 50%;
+  position: absolute;
+  left: 70px;
+  top: 12px;
+  @include tablet {
+    height: 200px;
+    width: 200px;
+    top: 50px;
+    left: calc(50% - (200px / 2));
+  }
+}
+
+.benefits-box:last-of-type {
+  background-color: transparent;
+  border: none;
+  margin-bottom: 105px;
+}
+
+.benefits-box:last-of-type .benefits-box-text {
+  width: 623px;
+  background-color: $color-white;
+  padding-right: 34px;
+  border: 1px solid $color-benefits-shadow;
+  border-radius: 5px;
+  @include tablet {
+    top: 15px;
+    width: 100%;
+    padding-top: 30px;
+    height: auto;
+    position: relative;
+  }
+}
+
+.benefits-box:last-of-type .benefits-box-underline {
+  background-color: $color-green;
+}
+
+.green-rectangle {
+  background-color: $color-green;
+  width: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $color-benefits-shadow;
+  border-radius: 5px;
+  @include tablet {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    height: auto;
+  }
+}
+
+.benefits-box-img3 {
+  width: 296px;
+  height: 207px;
+  @include tablet {
+    padding-top: 30px;
+  }
+}

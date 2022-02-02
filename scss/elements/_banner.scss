@@ -1,0 +1,65 @@
+.banner {
+  width: 100%;
+  height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      font-family: $font-raleway;
+      font-weight: $font-weight-regular;
+      font-size: 3.0625rem;
+      color: $color-black;
+      padding-top: 130px;
+      text-align: center;
+    }
+
+    p {
+      font-family: $font-open-sans;
+      font-weight: $font-weight-regular;
+      font-size: $font-size-primary;
+      color: $color-black;
+      padding-top: 20px;
+      text-align: center;
+    }
+
+    a {
+      text-decoration: none;
+      font-family: $font-open-sans;
+      font-weight: $font-weight-bold;
+      font-size: $font-size-primary;
+      padding-top: 38px;
+      color: $color-white;
+    }
+  }
+
+  &-button {
+    background-color: $color-lightBlue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 23px 157px;
+    box-shadow: $color-blue-shadow 5px 10px 14px;
+    border-radius: 40px;
+    text-align: center;
+
+    @include mobile {
+      margin: 0 15px;
+      padding: 16px 16px;
+      display: block;
+    }
+  }
+  img {
+    width: 100%;
+    height: auto;
+    @include mobile {
+      width: 200%;
+    }
+  }
+}

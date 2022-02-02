@@ -1,0 +1,145 @@
+.pricing {
+  background-color: $color-white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.pricing > h2 {
+  padding: 100px 0 50px 0;
+}
+
+.price-options {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.price-options-box {
+  width: 372px;
+  height: 461px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid $color-red;
+  border-radius: 18px;
+  position: relative;
+  margin: 21px 29.5px 0 29.5px;
+
+  @include mobile {
+    flex-direction: row;
+  }
+}
+
+.pricing-header {
+  font-family: $font-raleway;
+  font-weight: $font-weight-bold;
+  font-size: 1.25rem;
+  color: $color-black;
+  padding-top: 34px;
+}
+
+.amount {
+  font-family: $font-open-sans;
+  font-weight: $font-weight-light;
+  font-size: 2.875rem;
+  color: $color-red;
+  padding-top: 14px;
+  padding-bottom: 69px;
+}
+
+.limited {
+  font-family: $font-raleway;
+  font-weight: $font-weight-bold;
+  font-size: .75rem;
+  color: $color-semi-black;
+  padding: 10px 0 61px 0;
+}
+
+.price-options-box ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.included, .not-included {
+  font-family: $font-open-sans;
+  font-weight: $font-weight-regular;
+  font-size: .875rem;
+  padding-bottom: 20px;
+}
+
+.included::before {
+  content: "";
+  width: 11px;
+  height: 11px;
+  display: inline-block;
+  background-image: url("../assets/Ckechmark-1.svg");
+  margin-right: 10px;
+}
+
+.not-included::before {
+  content: "";
+  width: 11px;
+  height: 11px;
+  background-image: url("../assets/Close.svg");
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.price-options-link {
+  text-decoration: none;
+  font-family: $font-open-sans;
+  font-weight: $font-weight-bold;
+  font-size: .8125rem;
+  color: $color-white;
+  background-color: $color-red;
+  padding: 16px 57px;
+  border-radius: 23px;
+  position: absolute;
+  bottom: -25px;
+}
+
+.price-options-box:nth-of-type(2)  {
+  height: 500px;
+  width: 405px;
+  border: 1px solid $color-blue-secondary;
+  margin-top: 0;
+  box-shadow: $color-vrey-light-blue 5px 10px 27px;
+}
+
+.price-options-box:nth-of-type(2) h3 {
+  font-size: 1.3125rem;
+}
+
+.price-options-box:nth-of-type(2) p.amount {
+  color: $color-blue-secondary;
+  padding-bottom: 5px;
+}
+
+.price-options-box:nth-of-type(2) a {
+  background-color: $color-blue-secondary;
+}
+
+.price-options-box:last-of-type {
+  border: 1px solid $color-green;
+}
+
+.price-options-box:last-of-type p.amount {
+  color: $color-green;
+  padding-bottom: 5px;
+}
+
+.price-options-box:last-of-type a {
+  background-color: $color-green;
+}
+
+.price-options-box:last-of-type p.limited {
+  padding-bottom: 37px;
+}
