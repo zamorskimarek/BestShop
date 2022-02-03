@@ -49,6 +49,9 @@
 }
 
 .calculator-results-box {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
   height: 31px;
   width: 385px;
   background-color: $color-green;

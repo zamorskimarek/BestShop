@@ -168,16 +168,14 @@
         <div class="calculator container">
             <div class="calculator-input">
                 <form class="contact-form">
-                    <input type="text" id="products-quantity" class="calculator-input-box" placeholder="Products quantity">
-                    <input type="text" id="estimated-orders"  placeholder="Estimated orders in month">
-                    <div class="testttttt">
+                    <input type="text" id="products-quantity" class="calculator-input-box" placeholder="Products quantity" data-index = "0" data-price = "5">
+                    <input type="text" id="estimated-orders"  placeholder="Estimated orders in month" data-index = "1" data-price = "2">
                     <select name="pricing-options" id="pricing-option">
                         <option value="" disabled selected hidden>Select your option</option>
                         <option value="basic">Basic</option>
                         <option value="professional">Professional</option>
                         <option value="premium">Premium</option>
                     </select>
-                    </div>
                     <label class="checkbox">
                         <input type="checkbox" id="accounting-checkbox">
                         <span></span>
@@ -191,24 +189,24 @@
                 </form>
             </div>
             <div class="calculator-results">
-                <div class="calculator-results-box d-none">
-                    <span>Products</span><span class="calculator-results-box-text">dzialanie</span><span class="calculator-results-box-result">wynik</span>
+                <div class="calculator-results-box-error d-none" id="calculator-results-box-error">Incorrect value - must be an integer number greater than 0 !!!</div>
+                <div class="calculator-results-box d-none" id="products-quantity-result-box">
+                    <span>Products</span><span class="calculator-results-box-text" id="products-quantity-result-span">dzialanie</span><span class="calculator-results-box-result" id="products-quantity-result-result">wynik</span>
                 </div>
-                <div class="calculator-results-box d-none">
-                    <span>Orders</span><span class="calculator-results-box-text">dzialanie</span><span class="calculator-results-box-result">wynik</span>
+                <div class="calculator-results-box d-none" id="estimated-orders-result-box">
+                    <span>Orders</span><span class="calculator-results-box-text" id="estimated-orders-result-span">dzialanie</span><span class="calculator-results-box-result" id="estimated-orders-result-result">wynik</span>
                 </div>
-                <div class="calculator-results-box d-none">
-                    <span>Package</span><span class="calculator-results-box-text">dzialanie</span><span class="calculator-results-box-result">wynik</span>
+                <div class="calculator-results-box d-none" id="pricing-option-result-box">
+                    <span>Package</span><span class="calculator-results-box-text" id="pricing-option-result-span">dzialanie</span><span class="calculator-results-box-result" id="pricing-option-result-result">wynik</span>
                 </div>
-                <div class="calculator-results-box d-none">
-                    <span>Accounting</span><span class="calculator-results-box-result">wynik</span>
+                <div class="calculator-results-box d-none" id="accounting-checkbox-result-box">
+                    <span>Accounting</span><span class="calculator-results-box-result" id="accounting-checkbox-result-span">wynik</span>
                 </div>
-                <div class="calculator-results-box d-none">
-                    <span>Terminal</span><span class="calculator-results-box-result">wynik</span>
+                <div class="calculator-results-box d-none" id="rental-checkbox-result-box">
+                    <span>Terminal</span><span class="calculator-results-box-result" id="rental-checkbox-result-span">wynik</span>
                 </div>
-                <div class="calculator-results-box-error d-none">Incorrect value - must be a number greater than 0 !!!</div>
                 <div class="calculator-results-box-total">
-                    <span>Total</span><span class="calculator-results-box-total-value">$0</span>
+                    <span>Total</span><span class="calculator-results-box-total-value" id="calculator-results-box-total-value">$0</span>
                 </div>
             </div>
         </div>
