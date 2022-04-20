@@ -1,14 +1,7 @@
 
 const prodQuant = document.querySelector("#products-quantity");
-// const prodQuantResultBox = document.querySelector("#products-quantity-result-box");
-// const prodQuantResultResult = document.querySelector("#products-quantity-result-result");
-// const prodQuantResultSpan = document.querySelector("#products-quantity-result-span");
-
 
 const estimOrders = document.querySelector("#estimated-orders");
-// const estimOrdersResultBox = document.querySelector("#estimated-orders-result-box");
-// const estimOrdersResultResult = document.querySelector("#estimated-orders-result-result");
-// const estimOrdersResultSpan = document.querySelector("#estimated-orders-result-span");
 
 const packageType = document.querySelector("#pricing-option");
 const packageTypeResultBox = document.querySelector("#pricing-option-result-box");
@@ -72,29 +65,6 @@ const changeQuantity = function () {
     }
 }
 
-// const changeOrders = function () {
-//     if (estimOrders.value > 0 && estimOrders.value % 1 === 0) {
-//         estimOrdersResultBox.style.display = "flex";
-//         estimOrdersResultSpan.innerText = estimOrders.value + " * $2.00";
-//         estimOrdersResultResult.innerText = "  $" + 2 * estimOrders.value;
-//         Error.style.display = "none";
-//         totalGlobalArray[1] = 2 * estimOrders.value;
-//         console.log(totalGlobalArray);
-//         totalGlobalText.innerText = "$" + addArray(totalGlobalArray);
-//
-//     } else if (estimOrders.value == 0) {
-//         Error.style.display = "none";
-//         estimOrdersResultBox.style.display = "none";
-//         totalGlobalArray[1] = 0;
-//         totalGlobalText.innerText = "$" + addArray(totalGlobalArray);
-//     }
-//
-//     else {
-//         Error.style.display = "block";
-//         estimOrdersResultBox.style.display = "none";
-//
-//     }
-// }
 
 const changePackage = function () {
     if (packageType.value === "basic") {
