@@ -1,0 +1,87 @@
+.d-none {
+  display: none;
+}
+
+.pricing-calculator {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.calculator-input {
+  padding-top: 52px;
+}
+
+#products-quantity, #estimated-orders, #pricing-option {
+  height: 40px;
+  width: 440px;
+  margin-bottom: 20px;
+  border: 1px solid $color-primary;
+  border-radius: 6px;
+  box-shadow: $color-primary-shadow1 0 3px 6px;
+  background-color: $color-white;
+  color: $color-grey;
+}
+
+#pricing-option {
+  appearance: none;
+  background-image: url("../assets/Arrow Down.svg");
+  background-repeat: no-repeat;
+  background-position-x: calc(100% - 14px);
+  background-position-y: 50%;
+  option {
+    color: red;
+  }
+}
+
+.calculator-results {
+  padding-top: 53px;
+  position: relative;
+}
+
+.calculator-results-box {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  height: 31px;
+  width: 385px;
+  background-color: $color-green;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  color: $color-white;
+}
+
+.calculator-results-box-total {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 179px;
+  height: 38px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-primary;
+  padding: 19px 15px;
+  color: $color-white;
+  border-radius: 6px;
+}
+
+.calculator-results-box-error {
+  height: 50px;
+  width: 450px;
+  background-color: red;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  color: $color-white;
+  text-align: center;
+  padding: 15px 0;
+}

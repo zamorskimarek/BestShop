@@ -1153,6 +1153,9 @@ input[type=text] {
 }
 
 .calculator-results-box {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
   height: 31px;
   width: 385px;
   background-color: #55DFB4;

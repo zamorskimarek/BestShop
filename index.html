@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -11,20 +11,29 @@
     <meta property="og:title" content="BestShop  langing page">
     <meta property="og:type" content="website">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+<!--    <link rel="stylesheet" href="css/style.css">-->
+    <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@300;400;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-logo">BestShop</div>
-            <nav class="menu">
-                <a href="#whyUs"><div class="menu-item">why us</div></a>
-                <a href="#bene"><div class="menu-item">benefits</div></a>
-                <a href="#pric"><div class="menu-item">prices</div></a>
-                <a href="#cont"><div class="menu-item">contact</div></a>
+    <header class="header">
+        <div class="header__container container">
+            <a href="#" class="logo">BestShop</a>
+            <nav>
+                <input type="checkbox" class="menu__btn" id="menu__btn">
+                <label for="menu__btn" class="menu__toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <ul class="header__nav">
+                    <li class="nav__element"><a href="#why-us" class="nav__link">Why us</a></li>
+                    <li class="nav__element"><a href="#benefits" class="nav__link">Benefits</a></li>
+                    <li class="nav__element"><a href="#prices" class="nav__link">Prices</a></li>
+                    <li class="nav__element"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -36,7 +45,7 @@
         </section>
         <img src="assets/Background.png" alt="top view of a person working on a computer">
     </main>
-    <section class="stats" id="whyUs">
+    <section class="stats container" id="whyUs">
         <h2>The most popular sales platform in country</h2>
         <div class="stats-items">
             <div class="stats-items-column">
@@ -154,6 +163,54 @@
             <div class="button-position"><button class="btn">Send</button></div>
         </form>
     </section>
+    <section class="pricing-calculator">
+        <h2 class="calc-header">Calculate how much you'll pay</h2>
+        <div class="calculator container">
+            <div class="calculator-input">
+                <form class="contact-form">
+                    <input type="text" id="products-quantity" class="calculator-input-box" placeholder="Products quantity" data-index = "0" data-price = "5">
+                    <input type="text" id="estimated-orders"  placeholder="Estimated orders in month" data-index = "1" data-price = "2">
+                    <select name="pricing-options" id="pricing-option">
+                        <option value="" disabled selected hidden>Select your option</option>
+                        <option value="basic">Basic</option>
+                        <option value="professional">Professional</option>
+                        <option value="premium">Premium</option>
+                    </select>
+                    <label class="checkbox">
+                        <input type="checkbox" id="accounting-checkbox">
+                        <span></span>
+                        Accounting
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" id="rental-checkbox">
+                        <span></span>
+                        Rental of a payment terminal
+                    </label>
+                </form>
+            </div>
+            <div class="calculator-results">
+                <div class="calculator-results-box-error d-none" id="calculator-results-box-error">Incorrect value - must be an integer number greater than 0 !!!</div>
+                <div class="calculator-results-box d-none" id="products-quantity-result-box">
+                    <span>Products</span><span class="calculator-results-box-text" id="products-quantity-result-span">dzialanie</span><span class="calculator-results-box-result" id="products-quantity-result-result">wynik</span>
+                </div>
+                <div class="calculator-results-box d-none" id="estimated-orders-result-box">
+                    <span>Orders</span><span class="calculator-results-box-text" id="estimated-orders-result-span">dzialanie</span><span class="calculator-results-box-result" id="estimated-orders-result-result">wynik</span>
+                </div>
+                <div class="calculator-results-box d-none" id="pricing-option-result-box">
+                    <span>Package</span><span class="calculator-results-box-text" id="pricing-option-result-span">dzialanie</span><span class="calculator-results-box-result" id="pricing-option-result-result">wynik</span>
+                </div>
+                <div class="calculator-results-box d-none" id="accounting-checkbox-result-box">
+                    <span>Accounting</span><span class="calculator-results-box-result" id="accounting-checkbox-result-span">wynik</span>
+                </div>
+                <div class="calculator-results-box d-none" id="rental-checkbox-result-box">
+                    <span>Terminal</span><span class="calculator-results-box-result" id="rental-checkbox-result-span">wynik</span>
+                </div>
+                <div class="calculator-results-box-total">
+                    <span>Total</span><span class="calculator-results-box-total-value" id="calculator-results-box-total-value">$0</span>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer class="end-page">
         <div class="footer-text">
             <p class="footer-logo">BestShop</p>
@@ -164,5 +221,8 @@
             <a href="#"><img src="assets/Facebook.svg" alt="facebook"></a>
         </div>
     </footer>
+
+<script src="js/main.js"></script>
+
 </body>
 </html>
