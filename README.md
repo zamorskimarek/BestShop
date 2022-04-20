@@ -4,11 +4,9 @@ This is my first bigger project - landing page to a webshop. It combines my new 
 
 ## This project is a part of a workshop during FrontEnd Developer Bootcamp at CodersLab school.
 
-Please tak a look and leave a comment if you would like to :)
+Please take a look and leave a comment if you would like to :)
 
 MIT License
-
-Copyright (c) 2021 Marek Zamorski
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
